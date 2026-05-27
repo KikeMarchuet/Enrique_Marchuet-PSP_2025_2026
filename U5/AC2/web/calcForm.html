@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ca">
+    <head><meta charset="UTF-8">
+        <title>Calculadora</title>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Calculadora</h1>
+        </header>
+        <nav>
+            <a href="/">Inici</a>
+            <a href="/web">Informació</a>
+            <a href="/form">Formulari</a>
+            <a href="/alumne">Alumne</a>
+        </nav>
+        <main>
+            <form action="/resultat" method="get">
+                <input name="a" placeholder="Número 1" required></p>
+                <input name="b" placeholder="Número 2" required></p>
+
+                <select name="op" required>
+                    <option value="suma">Suma</option>
+                    <option value="resta">Resta</option>
+                    <option value="multiplicacio">Multiplicació</option>
+                    <option value="divisio">Divisió</option>
+                </select><br>
+
+                </p>
+                <button type="submit">Enviar</button>
+            </form>
+        </main>
+        <footer>Port 8082</footer>
+    </body>
+</html>

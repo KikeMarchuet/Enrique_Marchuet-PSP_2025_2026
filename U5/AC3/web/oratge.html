@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ca">
+    <head><meta charset="UTF-8">
+        <title>Oratge de la ciutat</title>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Oratge de la ciudat</h1>
+        </header>
+        <nav>
+            <a href="/">Inici</a>
+            <a href="/web">Informació</a>
+            <a href="/form">Formulari</a>
+            <a href="/calc">Calculadora</a>
+            <a href="/alumne">Alumne</a>
+        </nav>
+        <main>
+            <form action="/resultat-oratge" method="get">
+                <label for="ciutat">Ciutat</label>
+                <select id="ciutat" name="ciutat" required>
+                    <option value="">Selecciona una ciutat</option>
+                </select>
+                <button type="submit">Enviar</button>
+            </form>
+        </main>
+        <footer>Port 8082</footer>
+        <script>
+            fetch("/api/ciutats")
+                .then(response => response.json())
+                .then(ciutats => {
+                    const select = document.getElementById("ciutat");
+
+                    ciutats.forEach(ciutat => {
+                        const option = document.createElement("option");
+                        option.value = ciutat.nombre;
+                        option.textContent = ciutat.nombre;
+                        select.appendChild(option);
+                    });
+                });
+        </script>
+    </body>
+</html>

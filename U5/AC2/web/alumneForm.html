@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ca">
+    <head><meta charset="UTF-8">
+        <title>Formulari Alumne</title>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Formulari Alumne</h1>
+        </header>
+        <nav>
+            <a href="/">Inici</a>
+            <a href="/web">Informació</a>
+            <a href="/form">Formulari</a>
+            <a href="/calc">Calculadora</a>
+        </nav>
+        <main>
+            <form action="/alumnat" method="get">
+                <input name="nom" placeholder="Nom" required></p>
+                <input name="cognoms" placeholder="Cognoms" required></p>
+                <input type="number" name="edat" placeholder="Edat" required></p>
+
+                <select name="curs" required>
+                    <option value="DAM">DAM</option>
+                    <option value="DAW">DAW</option>
+                    <option value="ASIX">ASIX</option>
+                </select><br>
+
+                </p>
+                <button type="submit">Enviar</button>
+            </form>
+        </main>
+        <footer>Port 8082</footer>
+    </body>
+</html>
